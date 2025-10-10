@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сравнение</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/nes.css/css/nes.min.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container main-nav">
+            <div class="nav-brand">
+                <a href="index.html">
+                    <h1>CSS Фреймворки</h1>
+                    <p>Сравнение и обзор</p>
+                </a>
+            </div>
+            <nav>
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nes-btn">Главная</a></li>
+                    <li><a href="bootstrap.html" class="nes-btn">Bootstrap</a></li>
+                    <li><a href="tailwind.html" class="nes-btn">Tailwind</a></li>
+                    <li><a href="foundation.html" class="nes-btn">Foundation</a></li>
+                    <li><a href="bulma.html" class="nes-btn">Bulma</a></li>
+                    <li><a href="comparison.html" class="nes-btn">Сравнение</a></li>
+                    <li><a href="examples.html" class="nes-btn">Примеры</a></li>
+                    <li><a href="resources.html" class="nes-btn">Ресурсы</a></li>
+                    <li><a href="about.html" class="nes-btn">О проекте</a></li>
+                </ul>
+                <button class="menu-toggle" id="menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <div class="main-layout container">
+        <main class="main-content">
+            <section class="nes-container with-title">
+                <h2 class="title">Детальное сравнение</h2>
+                <p>Сравним основные характеристики популярных CSS фреймворков.</p>
+                
+                <div class="nes-table-responsive">
+                    <table class="nes-table is-bordered is-centered">
+                        <thead>
+                            <tr>
+                                <th>Характеристика</th>
+                                <th>Bootstrap</th>
+                                <th>Tailwind CSS</th>
+                                <th>Foundation</th>
+                                <th>Bulma</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Версия</td>
+                                <td>v5.3.8</td>
+                                <td>v4.1.14</td>
+                                <td>v6.9.0</td>
+                                <td>v1.0.0</td>
+                            </tr>
+                            <tr>
+                                <td>Подход</td>
+                                <td>Компонентный</td>
+                                <td>Utility-First</td>
+                                <td>Компонентный</td>
+                                <td>Компонентный</td>
+                            </tr>
+                            <tr>
+                                <td>Размер (gzip)</td>
+                                <td>~25KB</td>
+                                <td>~10KB (JIT)</td>
+                                <td>~40KB</td>
+                                <td>~30KB</td>
+                            </tr>
+                            <tr>
+                                <td>JavaScript</td>
+                                <td>✅ Включен</td>
+                                <td>❌ Не требуется</td>
+                                <td>✅ Включен</td>
+                                <td>❌ Не требуется</td>
+                            </tr>
+                            <tr>
+                                <td>Кастомизация</td>
+                                <td>SASS переменные</td>
+                                <td>Config файл</td>
+                                <td>SASS миксины</td>
+                                <td>SASS переменные</td>
+                            </tr>
+                            <tr>
+                                <td>Сложность изучения</td>
+                                <td>🟢 Низкая</td>
+                                <td>🟡 Средняя</td>
+                                <td>🔴 Высокая</td>
+                                <td>🟢 Низкая</td>
+                            </tr>
+                            <tr>
+                                <td>Популярность</td>
+                                <td>⭐⭐⭐⭐⭐</td>
+                                <td>⭐⭐⭐⭐⭐</td>
+                                <td>⭐⭐⭐</td>
+                                <td>⭐⭐⭐⭐</td>
+                            </tr>
+                            <tr>
+                                <td>Лучший для</td>
+                                <td>Новичков, прототипов</td>
+                                <td>Кастомных дизайнов</td>
+                                <td>Enterprise проектов</td>
+                                <td>Flexbox проектов</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section class="nes-container with-title">
+                <h3 class="title">Рекомендации по выбору</h3>
+                <div class="feature-grid">
+                    <div class="nes-container">
+                        <h4>🎯 Для новичков</h4>
+                        <p>Bootstrap - отличная документация, много готовых компонентов</p>
+                    </div>
+                    
+                    <div class="nes-container">
+                        <h4>🎨 Для дизайнеров</h4>
+                        <p>Tailwind CSS - полный контроль над дизайном</p>
+                    </div>
+                    
+                    <div class="nes-container">
+                        <h4>🏢 Для больших проектов</h4>
+                        <p>Foundation - мощные возможности для enterprise</p>
+                    </div>
+                    
+                    <div class="nes-container">
+                        <h4>⚡ Для быстрых проектов</h4>
+                        <p>Bulma - чистый CSS, легкий и современный</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="nes-container with-title">
+                <h3 class="title">Тенденции 2025</h3>
+                <div class="use-cases">
+                    <div class="use-case nes-container">
+                        <h4>📈 Растет</h4>
+                        <p>Tailwind CSS</p>
+                        <p>Utility-first подход</p>
+                    </div>
+                    <div class="use-case nes-container">
+                        <h4>📊 Стабилен</h4>
+                        <p>Bootstrap</p>
+                        <p>По-прежнему лидер</p>
+                    </div>
+                    <div class="use-case nes-container">
+                        <h4>📉 Падает</h4>
+                        <p>Foundation</p>
+                        <p>Уступает новым фреймворкам</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <aside class="sidebar">
+            <section class="nes-container with-title">
+                <h3 class="title">Новости</h3>
+                <div class="news-item">
+                    <h4>Сравнение обновлено</h4>
+                    <p>Актуальные версии 2025. 2025-10</p>
+                </div>
+                <div class="news-item">
+                    <h4>Тенденции</h4>
+                    <p>Tailwind лидирует.</p>
+                </div>
+            </section>
+            
+            <section class="nes-container with-title">
+                <h3 class="title">Подписка</h3>
+                <form>
+                    <div class="nes-field">
+                        <input type="email" placeholder="Ваш email" required>
+                    </div>
+                    <button type="submit" class="nes-btn is-primary">Подписаться</button>
+                </form>
+            </section>
+        </aside>
+    </div>
+
+    <footer class="main-footer">
+        <div class="container footer-content">
+            <div class="footer-section">
+                <h4>CSS Фреймворки</h4>
+                <p>Образовательный проект о современных инструментах веб-разработки</p>
+            </div>
+            <div class="footer-section">
+                <h4>Ссылки</h4>
+                <ul class="nes-list is-disc">
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="comparison.html">Сравнение</a></li>
+                    <li><a href="about.html">О проекте</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Контакты</h4>
+                <p>email: example@mail.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 CSS Фреймворки. Учебный проект.</p>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>

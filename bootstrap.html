@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/nes.css/css/nes.min.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container main-nav">
+            <div class="nav-brand">
+                <a href="index.html">
+                    <h1>CSS Фреймворки</h1>
+                    <p>Сравнение и обзор</p>
+                </a>
+            </div>
+            <nav>
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nes-btn">Главная</a></li>
+                    <li><a href="bootstrap.html" class="nes-btn">Bootstrap</a></li>
+                    <li><a href="tailwind.html" class="nes-btn">Tailwind</a></li>
+                    <li><a href="foundation.html" class="nes-btn">Foundation</a></li>
+                    <li><a href="bulma.html" class="nes-btn">Bulma</a></li>
+                    <li><a href="comparison.html" class="nes-btn">Сравнение</a></li>
+                    <li><a href="examples.html" class="nes-btn">Примеры</a></li>
+                    <li><a href="resources.html" class="nes-btn">Ресурсы</a></li>
+                    <li><a href="about.html" class="nes-btn">О проекте</a></li>
+                </ul>
+                <button class="menu-toggle" id="menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <div class="main-layout container">
+        <main class="main-content">
+            <section class="nes-container with-title">
+                <h2 class="title">Bootstrap</h2>
+                <img class="framework__logo" src="https://upload.wikimedia.org/wikipedia/commons/b/b2/Bootstrap_logo.svg" 
+                     alt="Логотип Bootstrap" title="Bootstrap Logo"
+                     srcset="https://upload.wikimedia.org/wikipedia/commons/b/b2/Bootstrap_logo.svg 600w,
+                             https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bootstrap_logo.svg/300px-Bootstrap_logo.svg.png 300w"
+                     sizes="(max-width: 600px) 300px, 600px">
+                <div class="framework-header">
+                    <div class="nes-badge">
+                        <span class="is-primary">Самый популярный</span>
+                    </div>
+                    <div class="nes-badge">
+                        <span class="is-success">v5.3.8</span>
+                    </div>
+                </div>
+                
+                <p>Bootstrap - самый популярный в мире CSS фреймворк для создания адаптивных сайтов.</p>
+                
+                <div class="nes-container is-rounded">
+                    <h3>📊 Статистика</h3>
+                    <ul class="nes-list is-circle">
+                        <li>⭐ 165k+ stars на GitHub</li>
+                        <li>🔄 22+ миллионов сайтов</li>
+                        <li>📱 Полная адаптивность</li>
+                        <li>🎨 1000+ тем и шаблонов</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="nes-container with-title">
+                <h3 class="title">Основные возможности</h3>
+                
+                <div class="feature-grid">
+                    <div class="nes-container">
+                        <h4>📐 Сетка 12 колонок</h4>
+                        <p>Мощная система сеток для создания любых макетов</p>
+                    </div>
+                    
+                    <div class="nes-container">
+                        <h4>🎯 Готовые компоненты</h4>
+                        <p>Кнопки, формы, навигация, модальные окна</p>
+                    </div>
+                    
+                    <div class="nes-container">
+                        <h4>📱 Mobile First</h4>
+                        <p>Подход "сначала мобильные устройства"</p>
+                    </div>
+                    
+                    <div class="nes-container">
+                        <h4>🎨 Кастомизация</h4>
+                        <p>SASS переменные для легкой настройки</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="nes-container with-title">
+                <h3 class="title">Пример кода</h3>
+                <div class="code-example">
+// Установка через npm<br>
+npm install bootstrap<br>
+<br>
+// Подключение в HTML<br>
+&lt;link href="bootstrap.css" rel="stylesheet"&gt;<br>
+<br>
+// Пример кнопки<br>
+&lt;button class="btn btn-primary"&gt;Кнопка Bootstrap&lt;/button&gt;
+                </div>
+            </section>
+
+            <section class="nes-container with-title">
+                <h3 class="title">Видео обзор</h3>
+                <div class="video-container">
+                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/-qfEOE4vtxE" 
+                            title="Bootstrap Tutorial" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </section>
+        </main>
+
+        <aside class="sidebar">
+            <section class="nes-container with-title">
+                <h3 class="title">Новости</h3>
+                <div class="news-item">
+                    <h4>Bootstrap 5.3.8</h4>
+                    <p>Обновление с фиксами. 2025-08</p>
+                </div>
+                <div class="news-item">
+                    <h4>Новая фича</h4>
+                    <p>Улучшения в dark mode.</p>
+                </div>
+            </section>
+            
+            <section class="nes-container with-title">
+                <h3 class="title">Подписка</h3>
+                <form>
+                    <div class="nes-field">
+                        <input type="email" placeholder="Ваш email" required>
+                    </div>
+                    <button type="submit" class="nes-btn is-primary">Подписаться</button>
+                </form>
+            </section>
+        </aside>
+    </div>
+
+    <footer class="main-footer">
+    <div class="container footer-content">
+        <div class="footer-section">
+            <h4>CSS Фреймворки</h4>
+            <p>Образовательный проект о современных инструментах веб-разработки</p>
+        </div>
+        <div class="footer-section">
+            <h4>Ссылки</h4>
+            <ul class="nes-list is-disc">
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="comparison.html">Сравнение</a></li>
+                <li><a href="about.html">О проекте</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h4>Контакты</h4>
+            <p>email: css-frameworks@gmail.com</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>© 2025 CSS Фреймворки. Учебный проект.</p>
+    </div>
+</footer>
+    <script src="js/script.js"></script>
+</body>
+</html>

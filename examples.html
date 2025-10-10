@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Примеры - CSS Фреймворки</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/nes.css/css/nes.min.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container main-nav">
+            <div class="nav-brand">
+                <a href="index.html">
+                    <h1>CSS Фреймворки</h1>
+                    <p>Сравнение и обзор</p>
+                </a>
+            </div>
+            <nav>
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nes-btn">Главная</a></li>
+                    <li><a href="bootstrap.html" class="nes-btn">Bootstrap</a></li>
+                    <li><a href="tailwind.html" class="nes-btn">Tailwind</a></li>
+                    <li><a href="foundation.html" class="nes-btn">Foundation</a></li>
+                    <li><a href="bulma.html" class="nes-btn">Bulma</a></li>
+                    <li><a href="comparison.html" class="nes-btn">Сравнение</a></li>
+                    <li><a href="examples.html" class="nes-btn is-disabled">Примеры</a></li>
+                    <li><a href="resources.html" class="nes-btn">Ресурсы</a></li>
+                    <li><a href="about.html" class="nes-btn">О проекте</a></li>
+                </ul>
+                <button class="menu-toggle" id="menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <div class="main-layout container">
+        <main class="main-content">
+            <section class="nes-container with-title">
+                <h2 class="title">Примеры кода</h2>
+                <p>Нажмите на кнопку, чтобы увидеть пример кода для каждого фреймворка.</p>
+                
+                <div class="buttons-grid">
+                    <button type="button" class="nes-btn is-primary" onclick="openModal('bootstrap-modal')">
+                        Посмотреть пример Bootstrap
+                    </button>
+                    
+                    <button type="button" class="nes-btn is-success" onclick="openModal('tailwind-modal')">
+                        Посмотреть пример Tailwind
+                    </button>
+                    
+                    <button type="button" class="nes-btn is-warning" onclick="openModal('foundation-modal')">
+                        Посмотреть пример Foundation
+                    </button>
+                    
+                    <button type="button" class="nes-btn is-error" onclick="openModal('bulma-modal')">
+                        Посмотреть пример Bulma
+                    </button>
+                </div>
+            </section>
+
+            <!-- Модальные окна -->
+            <div class="modal" id="bootstrap-modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('bootstrap-modal')">&times;</span>
+                    <h3>Пример кода Bootstrap</h3>
+                    <div class="code-example">
+&lt;!-- Кнопка Bootstrap --&gt;
+&lt;button class="btn btn-primary"&gt;Кнопка&lt;/button&gt;
+
+&lt;!-- Сетка Bootstrap --&gt;
+&lt;div class="container"&gt;
+  &lt;div class="row"&gt;
+    &lt;div class="col-md-4"&gt;Колонка 1&lt;/div&gt;
+    &lt;div class="col-md-4"&gt;Колонка 2&lt;/div&gt;
+    &lt;div class="col-md-4"&gt;Колонка 3&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+                    </div>
+                </div>
+            </div>
+            
+            <div class="modal" id="tailwind-modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('tailwind-modal')">&times;</span>
+                    <h3>Пример кода Tailwind</h3>
+                    <div class="code-example">
+// Установка
+npm install -D tailwindcss
+npx tailwindcss init
+
+// tailwind.config.js
+module.exports = {
+  content: ["./src/**/*.{html,js}"],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
+
+// Пример кнопки
+&lt;button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"&gt;
+  Кнопка Tailwind
+&lt;/button&gt;
+                    </div>
+                </div>
+            </div>
+            
+            <div class="modal" id="foundation-modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('foundation-modal')">&times;</span>
+                    <h3>Пример кода Foundation</h3>
+                    <div class="code-example">
+// Установка через npm
+npm install foundation-sites
+
+// Или через CDN
+&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.9.0/dist/css/foundation.min.css"&gt;
+
+// Пример сетки XY Grid
+&lt;div class="grid-x grid-padding-x"&gt;
+  &lt;div class="cell small-6 medium-4"&gt;Ячейка 1&lt;/div&gt;
+  &lt;div class="cell small-6 medium-8"&gt;Ячейка 2&lt;/div&gt;
+&lt;/div&gt;
+
+// Пример кнопки
+&lt;button class="button primary"&gt;Кнопка Foundation&lt;/button&gt;
+
+// Инициализация JavaScript компонентов
+$(document).foundation();
+                    </div>
+                </div>
+            </div>
+            
+            <div class="modal" id="bulma-modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('bulma-modal')">&times;</span>
+                    <h3>Пример кода Bulma</h3>
+                    <div class="code-example">
+// Установка через npm
+npm install bulma
+
+// Или через CDN
+&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css"&gt;
+
+// Пример навигации
+&lt;nav class="navbar" role="navigation"&gt;
+  &lt;div class="navbar-brand"&gt;
+    &lt;a class="navbar-item" href="#"&gt;
+      &lt;img src="logo.png"&gt;
+    &lt;/a&gt;
+  &lt;/div&gt;
+&lt;/nav&gt;
+
+// Пример кнопки
+&lt;button class="button is-primary"&gt;Кнопка Bulma&lt;/button&gt;
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <aside class="sidebar">
+            <section class="nes-container with-title">
+                <h3 class="title">Новости</h3>
+                <div class="news-item">
+                    <h4>Новые примеры</h4>
+                    <p>Добавлены модальные окна. 2025-10</p>
+                </div>
+                <div class="news-item">
+                    <h4>Код обновлен</h4>
+                    <p>Актуальные версии.</p>
+                </div>
+            </section>
+            
+            <section class="nes-container with-title">
+                <h3 class="title">Подписка</h3>
+                <form>
+                    <div class="nes-field">
+                        <input type="email" placeholder="Ваш email" required>
+                    </div>
+                    <button type="submit" class="nes-btn is-primary">Подписаться</button>
+                </form>
+            </section>
+        </aside>
+    </div>
+
+    <footer class="main-footer">
+    <div class="container footer-content">
+        <div class="footer-section">
+            <h4>CSS Фреймворки</h4>
+            <p>Образовательный проект о современных инструментах веб-разработки</p>
+        </div>
+        <div class="footer-section">
+            <h4>Ссылки</h4>
+            <ul class="nes-list is-disc">
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="comparison.html">Сравнение</a></li>
+                <li><a href="about.html">О проекте</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h4>Контакты</h4>
+            <p>email: css-frameworks@gmail.com</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>© 2025 CSS Фреймворки. Учебный проект.</p>
+    </div>
+</footer>
+    <script src="js/script.js"></script>
+</body>
+</html>

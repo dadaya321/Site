@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foundation</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/nes.css/css/nes.min.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container main-nav">
+            <div class="nav-brand">
+                <a href="index.html">
+                    <h1>CSS Фреймворки</h1>
+                    <p>Сравнение и обзор</p>
+                </a>
+            </div>
+            <nav>
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nes-btn">Главная</a></li>
+                    <li><a href="bootstrap.html" class="nes-btn">Bootstrap</a></li>
+                    <li><a href="tailwind.html" class="nes-btn">Tailwind</a></li>
+                    <li><a href="foundation.html" class="nes-btn">Foundation</a></li>
+                    <li><a href="bulma.html" class="nes-btn">Bulma</a></li>
+                    <li><a href="comparison.html" class="nes-btn">Сравнение</a></li>
+                    <li><a href="examples.html" class="nes-btn">Примеры</a></li>
+                    <li><a href="resources.html" class="nes-btn">Ресурсы</a></li>
+                    <li><a href="about.html" class="nes-btn">О проекте</a></li>
+                </ul>
+                <button class="menu-toggle" id="menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <div class="main-layout container">
+        <main class="main-content">
+            <section class="nes-container with-title">
+                <h2 class="title">Foundation</h2>
+                <img class="framework__logo" src="https://get.foundation/sites/docs/assets/img/logos/foundation-sites-whitelabel.svg" 
+                     alt="Логотип Foundation" title="Foundation Logo"
+                     srcset="https://get.foundation/sites/docs/assets/img/logos/foundation-sites-whitelabel.svg 600w,
+                             https://get.foundation/sites/docs/assets/img/logos/foundation-sites-whitelabel.svg 300w" 
+                     sizes="(max-width: 600px) 300px, 600px">
+                <div class="framework-header">
+                    <div class="nes-badge">
+                        <span class="is-primary">Enterprise Level</span>
+                    </div>
+                    <div class="nes-badge">
+                        <span class="is-success">v6.9.0</span>
+                    </div>
+                </div>
+                
+                <p>Foundation - профессиональный frontend фреймворк для создания адаптивных веб-сайтов и приложений enterprise-уровня.</p>
+                
+                <div class="nes-container is-rounded">
+                    <h3>🏢 Особенности Foundation</h3>
+                    <ul class="nes-list is-circle">
+                        <li>Профессиональный enterprise уровень</li>
+                        <li>Мощная система сеток</li>
+                        <li>Богатая библиотека компонентов</li>
+                        <li>Flexible и настраиваемый</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="nes-container with-title">
+                <h3 class="title">Архитектура Foundation</h3>
+                <div class="architecture-grid">
+                    <div class="nes-container">
+                        <h4>🎯 Modular Scale</h4>
+                        <p>Типографика на основе модульной шкалы</p>
+                        <div class="code-example small">
+$header-sizes: (
+  small: (...),
+  medium: (...)
+);
+                        </div>
+                    </div>
+                    
+                    <div class="nes-container">
+                        <h4>📐 XY Grid</h4>
+                        <p>Продвинутая 2D система сеток</p>
+                        <div class="code-example small">
+.grid-x
+  .cell
+  .cell
+                        </div>
+                    </div>
+                    
+                    <div class="nes-container">
+                        <h4>🔧 Motion UI</h4>
+                        <p>Библиотека CSS анимаций и переходов</p>
+                        <div class="code-example small">
+@include mui-slide(
+  in, right, 100%
+);
+                        </div>
+                    </div>
+                    
+                    <div class="nes-container">
+                        <h4>🎨 Customization</h4>
+                        <p>Глубокая кастомизация через SASS</p>
+                        <div class="code-example small">
+$primary-color: #1779ba;
+$accordion-background: #fff;
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="nes-container with-title">
+                <h3 class="title">Ключевые компоненты</h3>
+                <div class="components-grid">
+                    <div class="nes-container">
+                        <h4>📊 Responsive Grid</h4>
+                        <p>XY Grid система - самая продвинутая среди фреймворков</p>
+                        <span class="nes-badge is-splited"><span class="is-dark">Уникальная особенность</span></span>
+                    </div>
+                    
+                    <div class="nes-container">
+                        <h4>🎪 Motion UI</h4>
+                        <p>Встроенная библиотека анимаций</p>
+                        <span class="nes-badge is-splited"><span class="is-dark">Инновация</span></span>
+                    </div>
+                    
+                    <div class="nes-container">
+                        <h4>📱 Responsive Navigation</h4>
+                        <p>Адаптивные меню для любых устройств</p>
+                        <span class="nes-badge is-splited"><span class="is-dark">Профессионально</span></span>
+                    </div>
+                    
+                    <div class="nes-container">
+                        <h4>🔒 Security Features</h4>
+                        <p>Встроенные функции безопасности</p>
+                        <span class="nes-badge is-splited"><span class="is-dark">Enterprise</span></span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="nes-container with-title">
+                <h3 class="title">Пример кода</h3>
+                <div class="code-example">
+// Установка через npm
+
+npm install foundation-sites
+
+
+
+// Или через CDN
+
+&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.9.0/dist/css/foundation.min.css"&gt;
+
+
+
+// Пример сетки XY Grid
+
+&lt;div class="grid-x grid-padding-x"&gt;
+
+  &lt;div class="cell small-6 medium-4"&gt;Ячейка 1&lt;/div&gt;
+
+  &lt;div class="cell small-6 medium-8"&gt;Ячейка 2&lt;/div&gt;
+
+&lt;/div&gt;
+
+
+
+// Пример кнопки
+
+&lt;button class="button primary"&gt;Кнопка Foundation&lt;/button&gt;
+
+
+
+// Инициализация JavaScript компонентов
+
+$(document).foundation();
+                </div>
+            </section>
+
+            <section class="nes-container with-title">
+                <h3 class="title">Видео обзор</h3>
+                <div class="video-container">
+                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/_drzb7j9Bg4" 
+                            title="Foundation Tutorial" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </section>
+
+            <section class="nes-container with-title">
+                <h3 class="title">Для кого подходит Foundation?</h3>
+                <div class="audience-grid">
+                    <div class="nes-container">
+                        <h4>🏢 Крупные компании</h4>
+                        <p>Enterprise проекты с сложными требованиями</p>
+                        <ul class="nes-list is-disc">
+                            <li>Большие команды</li>
+                            <li>Строгие стандарты</li>
+                            <li>Безопасность</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="nes-container">
+                        <h4>🎨 Агентства</h4>
+                        <p>Дизайн-студии и веб-агентства</p>
+                        <ul class="nes-list is-disc">
+                            <li>Кастомные проекты</li>
+                            <li>Уникальный дизайн</li>
+                            <li>Брендинг</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="nes-container">
+                        <h4>🚀 Сложные проекты</h4>
+                        <p>Приложения с богатой функциональностью</p>
+                        <ul class="nes-list is-disc">
+                            <li>Веб-приложения</li>
+                            <li>Админ панели</li>
+                            <li>Дашборды</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="nes-container with-title">
+                <h3 class="title">Статистика Foundation</h3>
+                <ul class="nes-list is-circle">
+                    <li>⭐ 29k+ stars на GitHub</li>
+                    <li>🏢 Используется eBay, HP, Disney</li>
+                    <li>📚 Профессиональная документация</li>
+                    <li>🔧 Мощные инструменты</li>
+                </ul>
+            </section>
+
+            <section class="nes-container with-title">
+                <h3 class="title">Сильные стороны</h3>
+                <div class="strengths-list">
+                    <div class="strength-item nes-container">
+                        <h4>💪 Мощность</h4>
+                        <p>Самый мощный среди фреймворков</p>
+                    </div>
+                    
+                    <div class="strength-item nes-container">
+                        <h4>🎯 Гибкость</h4>
+                        <p>Высокая степень кастомизации</p>
+                    </div>
+                    
+                    <div class="strength-item nes-container">
+                        <h4>🛡️ Надежность</h4>
+                        <p>Протестирован в enterprise среде</p>
+                    </div>
+                    
+                    <div class="strength-item nes-container">
+                        <h4>📈 Масштабируемость</h4>
+                        <p>Подходит для больших проектов</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <aside class="sidebar">
+            <section class="nes-container with-title">
+                <h3 class="title">Новости</h3>
+                <div class="news-item">
+                    <h4>Foundation 6.9.0</h4>
+                    <p>Обновление с фиксами. 2024-09</p>
+                </div>
+                <div class="news-item">
+                    <h4>Enterprise фокус</h4>
+                    <p>Новые инструменты для бизнеса.</p>
+                </div>
+            </section>
+            
+            <section class="nes-container with-title">
+                <h3 class="title">Подписка</h3>
+                <form>
+                    <div class="nes-field">
+                        <input type="email" placeholder="Ваш email" required>
+                    </div>
+                    <button type="submit" class="nes-btn is-primary">Подписаться</button>
+                </form>
+            </section>
+        </aside>
+    </div>
+
+    <footer class="main-footer">
+        <div class="container footer-content">
+            <div class="footer-section">
+                <h4>CSS Фреймворки</h4>
+                <p>Образовательный проект о современных инструментах веб-разработки</p>
+            </div>
+            <div class="footer-section">
+                <h4>Ссылки</h4>
+                <ul class="nes-list is-disc">
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="comparison.html">Сравнение</a></li>
+                    <li><a href="about.html">О проекте</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Контакты</h4>
+                <p>email: example@mail.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 CSS Фреймворки. Учебный проект.</p>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>

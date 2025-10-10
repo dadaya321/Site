@@ -1,0 +1,620 @@
+/* css/style.css */
+
+/* Базовые настройки */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Press Start 2P', cursive;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    font-size: 12px;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Header */
+.main-header {
+    background-color: #fff;
+    border-bottom: 4px solid #000;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-brand a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.nav-brand h1 {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.nav-brand p {
+    margin: 5px 0 0 0;
+    font-size: 0.6rem;
+    color: #666;
+}
+
+/* Навигация */
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.nav-list {
+    display: flex;
+    gap: 8px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 5px;
+}
+
+.menu-toggle span {
+    height: 3px;
+    width: 25px;
+    background: #000;
+    margin: 3px 0;
+    border-radius: 2px;
+}
+
+/* Основной макет */
+.main-layout {
+    display: flex;
+    gap: 30px;
+    margin: 30px auto;
+    min-height: 70vh;
+}
+
+.main-content {
+    flex: 1;
+}
+
+.sidebar {
+    width: 300px;
+}
+
+/* Сетка фреймворков */
+.framework-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.framework-card {
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.3s ease;
+}
+
+.framework-card:hover {
+    transform: translateY(-5px);
+}
+
+.framework-icon {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+/* Кастомные иконки для фреймворков */
+.framework-icon::before {
+    content: "⚙️";
+}
+
+/* Footer */
+.main-footer {
+    background-color: #eee;
+    border-top: 4px solid #000;
+    padding: 30px 0 15px;
+    margin-top: 50px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-bottom: 20px;
+}
+
+.footer-section h4 {
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+}
+
+.footer-bottom {
+    border-top: 2px solid #000;
+    padding-top: 15px;
+    text-align: center;
+}
+
+/* Новости */
+.news-item {
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #ccc;
+}
+
+.news-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+/* Адаптивность для планшетов (768px - 991px) */
+@media (max-width: 991px) {
+    .main-layout {
+        flex-direction: column;
+    }
+    
+    .sidebar {
+        width: 100%;
+    }
+    
+    .framework-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Адаптивность для мобильных устройств (< 768px) */
+@media (max-width: 767px) {
+    .nav-list {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #fff;
+        border-bottom: 4px solid #000;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .nav-list.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .framework-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    body {
+        font-size: 10px;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+}
+
+/* Дополнительные стили для контента */
+.code-example {
+    background: #000;
+    color: #0f0;
+    padding: 15px;
+    border-radius: 4px;
+    font-family: 'Courier New', monospace;
+    margin: 15px 0;
+    overflow-x: auto;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.feature-list {
+    margin: 15px 0;
+}
+
+.feature-list li {
+    margin-bottom: 8px;
+}
+
+/* Стили для таблиц - ИСПРАВЛЕНИЕ ДЛЯ АДАПТИВНОСТИ */
+.nes-table-responsive {
+    overflow-x: auto;
+    margin: 15px 0;
+    -webkit-overflow-scrolling: touch; /* Плавная прокрутка на iOS */
+}
+
+.nes-table {
+    min-width: 600px; /* Минимальная ширина таблицы */
+    width: 100%;
+}
+
+/* Улучшенные стили для таблиц на мобильных */
+@media (max-width: 767px) {
+    .nes-table {
+        font-size: 10px; /* Уменьшаем шрифт на мобильных */
+    }
+    
+    .nes-table th,
+    .nes-table td {
+        padding: 8px 4px; /* Уменьшаем отступы */
+    }
+}
+
+/* Модальные окна */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 4px solid #000;
+    width: 80%;
+    max-width: 600px;
+    position: relative;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: black;
+}
+
+/* Сетка технологий */
+.tech-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin: 20px 0;
+}
+
+/* Статистика проекта */
+.project-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.stat-item {
+    text-align: center;
+    padding: 10px;
+    border: 2px solid #000;
+}
+
+.stat-item h4 {
+    margin: 0 0 5px 0;
+    font-size: 0.7rem;
+}
+
+.stat-item p {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* История версий */
+.version-history {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.version-item {
+    padding: 10px;
+    border-left: 4px solid #209cee;
+    background: #f8f8f8;
+}
+
+.version-item h4 {
+    margin: 0 0 5px 0;
+    font-size: 0.8rem;
+}
+
+.version-item p {
+    margin: 0 0 5px 0;
+    font-size: 0.7rem;
+}
+
+/* Контактная форма */
+.contact-info {
+    margin: 20px 0;
+}
+
+.contact-info .nes-field {
+    margin-bottom: 15px;
+}
+
+/* Компоненты Bulma */
+.components-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.components-grid .nes-container {
+    text-align: center;
+    padding: 15px;
+}
+
+/* Маленькие примеры кода */
+.code-example.small {
+    font-size: 12px;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+/* Случаи использования */
+.use-cases {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.use-case {
+    padding: 10px;
+    border-left: 4px solid #209cee;
+    background: #f8f8f8;
+}
+
+.use-case h4 {
+    margin: 0 0 5px 0;
+    font-size: 0.8rem;
+}
+
+/* Архитектура Foundation */
+.architecture-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.architecture-grid .nes-container {
+    padding: 15px;
+}
+
+/* Список компонентов */
+.components-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.component-item {
+    padding: 15px;
+    border: 2px solid #000;
+    border-left: 8px solid #209cee;
+}
+
+.component-item h4 {
+    margin: 0 0 8px 0;
+    font-size: 0.9rem;
+}
+
+.component-item p {
+    margin: 0 0 8px 0;
+    font-size: 0.7rem;
+}
+
+/* Аудитория Foundation */
+.audience-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.audience-grid .nes-container {
+    padding: 20px;
+}
+
+/* Сильные стороны */
+.strengths-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.strength-item {
+    text-align: center;
+    padding: 10px;
+    border: 2px solid #000;
+}
+
+.strength-item h4 {
+    margin: 0 0 5px 0;
+    font-size: 0.7rem;
+}
+
+.strength-item p {
+    margin: 0;
+    font-size: 0.6rem;
+}
+
+/* Адаптивность для мобильных */
+@media (max-width: 768px) {
+    .tech-grid,
+    .architecture-grid,
+    .audience-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .project-stats,
+    .strengths-list {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .components-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .project-stats,
+    .strengths-list,
+    .components-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .component-item {
+        padding: 10px;
+    }
+    
+    .stat-item,
+    .strength-item {
+        padding: 8px;
+    }
+}
+
+/* Адаптивность: mobile-first */
+@media (max-width: 767px) { /* Мобильные <768px */
+    /* Твои стили */
+}
+
+@media (min-width: 768px) { /* Планшеты ≥768px */
+    .framework-grid { grid-template-columns: repeat(2, 1fr); }
+    .main-layout { flex-direction: column; } /* Для планшетов колонкой */
+}
+
+@media (min-width: 992px) { /* Десктопы ≥992px */
+    .main-layout { flex-direction: row; gap: 30px; }
+    .sidebar { width: 300px; flex-shrink: 0; }
+    .framework-grid { grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
+}
+
+/* Для изображений */
+.framework__logo {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+/* Стили для сетки кнопок в examples.html */
+.buttons-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.buttons-grid .nes-btn {
+    width: 100%;
+    text-align: center;
+    padding: 15px;
+    font-size: 0.8rem;
+}
+
+/* Улучшения для модальных окон */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    animation: fadeIn 0.3s ease;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 25px;
+    border: 4px solid #000;
+    width: 90%;
+    max-width: 700px;
+    position: relative;
+    animation: slideDown 0.3s ease;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    line-height: 1;
+    padding: 0 5px;
+}
+
+.close:hover {
+    color: #000;
+}
+
+/* Анимации для модальных окон */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideDown {
+    from { 
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to { 
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Адаптивность для модальных окон */
+@media (max-width: 768px) {
+    .modal-content {
+        margin: 10% auto;
+        width: 95%;
+        padding: 20px;
+    }
+    
+    .buttons-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .modal-content {
+        margin: 5% auto;
+        width: 98%;
+        padding: 15px;
+    }
+    
+    .code-example {
+        font-size: 12px;
+        padding: 10px;
+    }
+}
