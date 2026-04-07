@@ -250,8 +250,8 @@ body {
 
 /* Дополнительные стили для контента */
 .code-example {
-    background: #1a1a2e;
-    color: #0f0;
+    background: #2d2d44;
+    color: #f8f8f2;
     padding: 15px;
     border-radius: 4px;
     font-family: 'Courier New', monospace;
@@ -263,7 +263,8 @@ body {
 }
 
 [data-theme="dark"] .code-example {
-    background: #0f0f1a;
+    background: #1a1a2e;
+    color: #ffffff;
 }
 
 .feature-list {
@@ -573,7 +574,7 @@ body {
 
 /* Для изображений логотипов фреймворков */
 .framework__logo {
-    max-width: 200px;
+    max-width: 150px;
     width: 100%;
     height: auto;
     margin-bottom: 15px;
