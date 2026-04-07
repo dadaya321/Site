@@ -21,7 +21,61 @@ window.onclick = function(event) {
 
 document.addEventListener('DOMContentLoaded', function() {
     
-    // Бургер-меню
+    // ==================== ТЕМНАЯ ТЕМА ====================
+    const themeToggle = document.createElement('button');
+    themeToggle.className = 'nes-btn theme-toggle';
+    themeToggle.innerHTML = '🌙';
+    themeToggle.setAttribute('aria-label', 'Переключить тему');
+    document.body.appendChild(themeToggle);
+    
+    // Проверка сохраненной темы
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    if (savedTheme === 'dark') {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        themeToggle.innerHTML = '☀️';
+    }
+    
+    // Переключение темы
+    themeToggle.addEventListener('click', function() {
+        const currentTheme = document.documentElement.getAttribute('data-theme');
+        if (currentTheme === 'dark') {
+            document.documentElement.removeAttribute('data-theme');
+            themeToggle.innerHTML = '🌙';
+            localStorage.setItem('theme', 'light');
+        } else {
+            document.documentElement.setAttribute('data-theme', 'dark');
+            themeToggle.innerHTML = '☀️';
+            localStorage.setItem('theme', 'dark');
+        }
+    });
+    
+    // ==================== LAZY LOADING ====================
+    const lazyImages = document.querySelectorAll('img[data-src]');
+    
+    if ('IntersectionObserver' in window) {
+        const imageObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const img = entry.target;
+                    img.src = img.dataset.src;
+                    img.classList.add('loaded');
+                    img.removeAttribute('data-src');
+                    observer.unobserve(img);
+                }
+            });
+        });
+        
+        lazyImages.forEach(img => imageObserver.observe(img));
+    } else {
+        // Fallback для старых браузеров
+        lazyImages.forEach(img => {
+            img.src = img.dataset.src;
+            img.classList.add('loaded');
+            img.removeAttribute('data-src');
+        });
+    }
+    
+    // ==================== БУРГЕР-МЕНЮ ====================
     const menuToggle = document.getElementById('menu-toggle');
     const navList = document.querySelector('.nav-list');
     
@@ -214,5 +268,42 @@ document.addEventListener('DOMContentLoaded', function() {
                 target.scrollIntoView({ behavior: 'smooth' });
             }, 100);
         }
+    }
+    
+    // ==================== SEO META TAGS ====================
+    // Добавляем canonical URL
+    const canonicalLink = document.createElement('link');
+    canonicalLink.rel = 'canonical';
+    canonicalLink.href = window.location.href.split('?')[0].split('#')[0];
+    document.head.appendChild(canonicalLink);
+    
+    // Добавляем Open Graph мета-теги если их нет
+    if (!document.querySelector('meta[property="og:title"]')) {
+        const ogTitle = document.createElement('meta');
+        ogTitle.property = 'og:title';
+        ogTitle.content = document.title;
+        document.head.appendChild(ogTitle);
+    }
+    
+    if (!document.querySelector('meta[property="og:type"]')) {
+        const ogType = document.createElement('meta');
+        ogType.property = 'og:type';
+        ogType.content = 'website';
+        document.head.appendChild(ogType);
+    }
+    
+    if (!document.querySelector('meta[property="og:url"]')) {
+        const ogUrl = document.createElement('meta');
+        ogUrl.property = 'og:url';
+        ogUrl.content = canonicalLink.href;
+        document.head.appendChild(ogUrl);
+    }
+    
+    // Добавляем Twitter Card мета-теги
+    if (!document.querySelector('meta[name="twitter:card"]')) {
+        const twitterCard = document.createElement('meta');
+        twitterCard.name = 'twitter:card';
+        twitterCard.content = 'summary';
+        document.head.appendChild(twitterCard);
     }
 });
