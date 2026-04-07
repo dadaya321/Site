@@ -571,11 +571,13 @@ body {
     .framework-grid { grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
 }
 
-/* Для изображений */
+/* Для изображений логотипов фреймворков */
 .framework__logo {
-    max-width: 100%;
+    max-width: 200px;
+    width: 100%;
     height: auto;
     margin-bottom: 15px;
+    display: block;
 }
 /* Стили для сетки кнопок в examples.html */
 .buttons-grid {
