@@ -1,5 +1,28 @@
 /* css/style.css */
 
+/* CSS Переменные для светлой и темной темы */
+:root {
+    --bg-color: #f4f4f4;
+    --text-color: #000;
+    --header-bg: #fff;
+    --footer-bg: #eee;
+    --border-color: #000;
+    --card-bg: #fff;
+    --link-color: #000;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="dark"] {
+    --bg-color: #1a1a2e;
+    --text-color: #eaeaea;
+    --header-bg: #16213e;
+    --footer-bg: #0f3460;
+    --border-color: #e94560;
+    --card-bg: #16213e;
+    --link-color: #e94560;
+    --shadow-color: rgba(233, 69, 96, 0.2);
+}
+
 /* Базовые настройки */
 * {
     box-sizing: border-box;
@@ -7,11 +30,13 @@
 
 body {
     font-family: 'Press Start 2P', cursive;
-    background-color: #f4f4f4;
+    background-color: var(--bg-color);
+    color: var(--text-color);
     margin: 0;
     padding: 0;
     line-height: 1.6;
     font-size: 12px;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .container {
@@ -23,12 +48,13 @@ body {
 
 /* Header */
 .main-header {
-    background-color: #fff;
-    border-bottom: 4px solid #000;
+    background-color: var(--header-bg);
+    border-bottom: 4px solid var(--border-color);
     padding: 15px 0;
     position: sticky;
     top: 0;
     z-index: 1000;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
 .nav-brand a {
@@ -44,7 +70,8 @@ body {
 .nav-brand p {
     margin: 5px 0 0 0;
     font-size: 0.6rem;
-    color: #666;
+    color: var(--text-color);
+    opacity: 0.7;
 }
 
 /* Навигация */
@@ -76,9 +103,10 @@ body {
 .menu-toggle span {
     height: 3px;
     width: 25px;
-    background: #000;
+    background: var(--text-color);
     margin: 3px 0;
     border-radius: 2px;
+    transition: background-color 0.3s ease;
 }
 
 /* Основной макет */
@@ -127,10 +155,11 @@ body {
 
 /* Footer */
 .main-footer {
-    background-color: #eee;
-    border-top: 4px solid #000;
+    background-color: var(--footer-bg);
+    border-top: 4px solid var(--border-color);
     padding: 30px 0 15px;
     margin-top: 50px;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
 .footer-content {
@@ -146,16 +175,19 @@ body {
 }
 
 .footer-bottom {
-    border-top: 2px solid #000;
+    border-top: 2px solid var(--border-color);
     padding-top: 15px;
     text-align: center;
+    transition: border-color 0.3s ease;
 }
 
 /* Новости */
 .news-item {
     margin-bottom: 15px;
     padding-bottom: 15px;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid var(--border-color);
+    opacity: 0.8;
+    transition: border-color 0.3s ease;
 }
 
 .news-item:last-child {
@@ -187,10 +219,11 @@ body {
         top: 100%;
         left: 0;
         right: 0;
-        background-color: #fff;
-        border-bottom: 4px solid #000;
+        background-color: var(--header-bg);
+        border-bottom: 4px solid var(--border-color);
         padding: 10px;
         text-align: center;
+        transition: background-color 0.3s ease, border-color 0.3s ease;
     }
 
     .nav-list.active {
@@ -217,8 +250,8 @@ body {
 
 /* Дополнительные стили для контента */
 .code-example {
-    background: #000;
-    color: #0f0;
+    background: #2d2d44;
+    color: #f8f8f2;
     padding: 15px;
     border-radius: 4px;
     font-family: 'Courier New', monospace;
@@ -226,6 +259,12 @@ body {
     overflow-x: auto;
     font-size: 14px;
     line-height: 1.4;
+    transition: background-color 0.3s ease;
+}
+
+[data-theme="dark"] .code-example {
+    background: #1a1a2e;
+    color: #ffffff;
 }
 
 .feature-list {
@@ -269,29 +308,33 @@ body {
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0,0,0,0.7);
 }
 
 .modal-content {
-    background-color: #fefefe;
+    background-color: var(--card-bg);
+    color: var(--text-color);
     margin: 5% auto;
     padding: 20px;
-    border: 4px solid #000;
+    border: 4px solid var(--border-color);
     width: 80%;
     max-width: 600px;
     position: relative;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
 .close {
-    color: #aaa;
+    color: var(--text-color);
+    opacity: 0.6;
     float: right;
     font-size: 28px;
     font-weight: bold;
     cursor: pointer;
+    transition: opacity 0.3s ease;
 }
 
 .close:hover {
-    color: black;
+    opacity: 1;
 }
 
 /* Сетка технологий */
@@ -312,7 +355,9 @@ body {
 .stat-item {
     text-align: center;
     padding: 10px;
-    border: 2px solid #000;
+    border: 2px solid var(--border-color);
+    background-color: var(--card-bg);
+    transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
 .stat-item h4 {
@@ -336,7 +381,9 @@ body {
 .version-item {
     padding: 10px;
     border-left: 4px solid #209cee;
-    background: #f8f8f8;
+    background: var(--card-bg);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .version-item h4 {
@@ -388,7 +435,9 @@ body {
 .use-case {
     padding: 10px;
     border-left: 4px solid #209cee;
-    background: #f8f8f8;
+    background: var(--card-bg);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .use-case h4 {
@@ -417,8 +466,11 @@ body {
 
 .component-item {
     padding: 15px;
-    border: 2px solid #000;
+    border: 2px solid var(--border-color);
     border-left: 8px solid #209cee;
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
 .component-item h4 {
@@ -453,7 +505,10 @@ body {
 .strength-item {
     text-align: center;
     padding: 10px;
-    border: 2px solid #000;
+    border: 2px solid var(--border-color);
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
 .strength-item h4 {
@@ -517,11 +572,13 @@ body {
     .framework-grid { grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
 }
 
-/* Для изображений */
+/* Для изображений логотипов фреймворков */
 .framework__logo {
-    max-width: 100%;
+    max-width: 150px;
+    width: 100%;
     height: auto;
     margin-bottom: 15px;
+    display: block;
 }
 /* Стили для сетки кнопок в examples.html */
 .buttons-grid {
@@ -547,33 +604,37 @@ body {
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0,0,0,0.7);
     animation: fadeIn 0.3s ease;
 }
 
 .modal-content {
-    background-color: #fefefe;
+    background-color: var(--card-bg);
+    color: var(--text-color);
     margin: 5% auto;
     padding: 25px;
-    border: 4px solid #000;
+    border: 4px solid var(--border-color);
     width: 90%;
     max-width: 700px;
     position: relative;
     animation: slideDown 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
 .close {
-    color: #aaa;
+    color: var(--text-color);
+    opacity: 0.6;
     float: right;
     font-size: 28px;
     font-weight: bold;
     cursor: pointer;
     line-height: 1;
     padding: 0 5px;
+    transition: opacity 0.3s ease;
 }
 
 .close:hover {
-    color: #000;
+    opacity: 1;
 }
 
 /* Анимации для модальных окон */
@@ -617,4 +678,28 @@ body {
         font-size: 12px;
         padding: 10px;
     }
+}
+
+/* Кнопка переключения темы */
+.theme-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.theme-toggle:hover {
+    transform: scale(1.1);
+}
+
+/* Lazy loading для изображений */
+img.lazy {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+img.lazy.loaded {
+    opacity: 1;
 }

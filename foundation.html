@@ -3,9 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Foundation</title>
+    <title>Foundation - Профессиональный CSS фреймворк</title>
+    <meta name="description" content="Foundation - профессиональный CSS фреймворк для сложных проектов с продвинутой сеткой и компонентами.">
+    <meta name="keywords" content="Foundation, CSS фреймворк, профессиональная разработка, сетка">
+    <meta name="author" content="CSS Фреймворки Проект">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Foundation - Профессиональный CSS фреймворк">
+    <meta property="og:description" content="Foundation - профессиональный CSS фреймворк для сложных проектов с продвинутой сеткой и компонентами.">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://example.com/foundation.html">
+    
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://unpkg.com/nes.css/css/nes.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 </head>
 <body>
     <header class="main-header">
@@ -41,11 +56,9 @@
         <main class="main-content">
             <section class="nes-container with-title">
                 <h2 class="title">Foundation</h2>
-                <img class="framework__logo" src="https://get.foundation/sites/docs/assets/img/logos/foundation-sites-whitelabel.svg" 
-                     alt="Логотип Foundation" title="Foundation Logo"
-                     srcset="https://get.foundation/sites/docs/assets/img/logos/foundation-sites-whitelabel.svg 600w,
-                             https://get.foundation/sites/docs/assets/img/logos/foundation-sites-whitelabel.svg 300w" 
-                     sizes="(max-width: 600px) 300px, 600px">
+                <!-- Логотип Foundation -->
+                <img class="framework__logo" src="https://cdn.jsdelivr.net/gh/foundation/foundation-sites@6.9.0/docs/assets/img/yeti.svg"
+                     alt="Логотип Foundation" title="Foundation Logo">
                 <div class="framework-header">
                     <div class="nes-badge">
                         <span class="is-primary">Enterprise Level</span>
@@ -272,16 +285,6 @@ $(document).foundation();
                     <p>Новые инструменты для бизнеса.</p>
                 </div>
             </section>
-            
-            <section class="nes-container with-title">
-                <h3 class="title">Подписка</h3>
-                <form>
-                    <div class="nes-field">
-                        <input type="email" placeholder="Ваш email" required>
-                    </div>
-                    <button type="submit" class="nes-btn is-primary">Подписаться</button>
-                </form>
-            </section>
         </aside>
     </div>
 
@@ -301,7 +304,8 @@ $(document).foundation();
             </div>
             <div class="footer-section">
                 <h4>Контакты</h4>
-                <p>email: example@mail.com</p>
+                <p>Email: contact@cssframeworks.dev</p>
+                <p>Twitter: @cssframeworks</p>
             </div>
         </div>
         <div class="footer-bottom">
